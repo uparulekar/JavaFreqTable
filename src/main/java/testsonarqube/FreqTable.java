@@ -1,3 +1,5 @@
+package testsonarqube;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -13,10 +15,10 @@ public class FreqTable {
 
     // program to create a frequency table.
     // Example of simple try catch blocks to deal with checked exceptions
-    public static void main(String[] args)
+    public static void run(String[] args)
         {
 
-        int[] freqs = createFreqTableURL("http://www.utexas.edu/");
+        int[] freqs = createFreqTableURL("https://en.wikipedia.org/wiki/Main_Page");
 
         if( freqs.length == 0)
             System.out.println("No frequency table created due to problems when reading from file");
