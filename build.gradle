@@ -1,3 +1,9 @@
+
+
+plugins {
+  id "org.sonarqube" version "2.5"
+}
+
 apply plugin: 'java-library'
 
 repositories {
@@ -8,3 +14,14 @@ dependencies {
 
     testImplementation 'junit:junit:4.12'
 }
+
+sonarqube {
+  properties {
+    property "sonar.projectName", "JavaFreqTable"
+    property "sonar.projectKey", "JavaFreqTable"
+  }
+}
+
+
+
+apply plugin: 'org.sonarqube'
